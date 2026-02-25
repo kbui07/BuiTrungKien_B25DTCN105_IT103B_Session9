@@ -10,9 +10,11 @@
         let orders = ["Đơn hàng A", "Đơn hàng B", "Đơn hàng C", "Đơn hàng D", "Đơn hàng E"];
         let revenues = [1500, 2800, 1200, -500, 3200];
         let orderReports = orders.map((orders, index) => {
-            console.log(`${orders} mang về ${revenues} USD`);
+            console.log(`${orders} mang về ${revenues[index]} USD`);
         });
-            
+        let totalValue = revenues.filter(revenues => revenues > 0).reduce((total,revenues) => ( total + revenues),0 );
+        console.log(`Tong doanh thu mang ve ${totalValue}`);
+        
     </script>
 </body>
 </html>
